@@ -65,7 +65,7 @@ export default function Footer({ isDark }) {
                 <FaGithub size={17} />
               </a>
               <a
-                href="https://www.linkedin.com/in/kushal-banerjee"
+                href="https://www.linkedin.com/in/kushal-banerjee-5195242b6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-10 h-10 rounded-xl flex items-center justify-center border transition duration-300 hover:scale-110 ${

@@ -97,7 +97,7 @@ export default function Navbar({ isDark, toggleTheme }) {
             <FaGithub size={17} />
           </a>
           <a
-            href="https://www.linkedin.com/in/kushal-banerjee"
+            href="https://www.linkedin.com/in/kushal-banerjee-5195242b6"
             target="_blank"
             rel="noopener noreferrer"
             className={`p-2.5 rounded-full transition hover:scale-110 ${

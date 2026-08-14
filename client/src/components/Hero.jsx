@@ -55,7 +55,7 @@ export default function Hero({ isDark }) {
             {/* Social Icons */}
             <div className="flex items-center gap-4 pt-4">
               <a
-                href="https://www.linkedin.com/in/kushal-banerjee"
+                href="https://www.linkedin.com/in/kushal-banerjee-5195242b6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-11 h-11 rounded-full flex items-center justify-center border transition duration-300 hover:scale-110 hover:-translate-y-1 ${
