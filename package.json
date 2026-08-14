@@ -8,6 +8,17 @@
     "build": "cd client && npm install && npm run build",
     "start": "node server/server.js"
   },
-  "keywords": ["react", "tailwind", "nodejs", "express", "mongodb", "portfolio"],
-  "author": "Kushal Banerjee"
+  "keywords": [
+    "react",
+    "tailwind",
+    "nodejs",
+    "express",
+    "mongodb",
+    "portfolio"
+  ],
+  "author": "Kushal Banerjee",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "mongoose": "^9.9.2"
+  }
 }
