@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kushal Banerjee | Resume</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --accent: #4f46e5;
+            --accent-rgb: 79, 70, 229;
+            --border-color: #e2e8f0;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.5;
+            padding: 40px 0;
+        }
+
+        .resume-page {
+            background-color: var(--bg-color);
+            width: 820px;
+            min-height: 1120px;
+            margin: 0 auto;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border-radius: 8px;
+        }
+
+        /* Toolbar */
+        .toolbar {
+            width: 820px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-print {
+            padding: 10px 20px;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.25);
+            transition: all 0.2s ease;
+        }
+
+        .btn-print:hover {
+            background-color: #4338ca;
+            transform: translateY(-1px);
+        }
+
+        .btn-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-back:hover {
+            color: var(--text-primary);
+        }
+
+        /* Resume Grid Layout */
+        header {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-left h1 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+        }
+
+        .header-left h2 {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .header-right a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .header-right a:hover {
+            color: var(--accent);
+        }
+
+        .header-right i {
+            width: 16px;
+            color: var(--accent);
+            margin-right: 4px;
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 40px;
+        }
+
+        /* Sidebar (Left Column) */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .section-title-sidebar {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            border-bottom: 1.5px solid var(--border-color);
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+
+        .skill-group {
+            margin-bottom: 15px;
+        }
+
+        .skill-group h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .skill-group p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .education-item h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .education-item p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .education-date {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Main Content (Right Column) */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .section-title-main {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            border-bottom: 1.5px solid var(--border-color);
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title-main i {
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .summary-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 25px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .item-header h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .item-header span {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .item-sub {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .item-desc {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .item-desc li {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 15px;
+            line-height: 1.5;
+        }
+
+        .item-desc li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .project-links {
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        .project-links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 600;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .resume-page {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+                min-height: auto;
+            }
+
+            .toolbar {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- Toolbar for Web Actions -->
+    <div class="toolbar">
+        <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+        <button onclick="window.print()" class="btn-print"><i class="fa-solid fa-print"></i> Print Resume</button>
+    </div>
+
+    <!-- Resume Container -->
+    <div class="resume-page">
+        
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <h1>KUSHAL BANERJEE</h1>
+                <h2>Frontend Developer | React Developer</h2>
+            </div>
+            <div class="header-right">
+                <span><i class="fa-solid fa-phone"></i> +91 9771385898</span>
+                <span><i class="fa-solid fa-envelope"></i> <a href="mailto:kushalbanerjee025@gmail.com">kushalbanerjee025@gmail.com</a></span>
+                <span><i class="fa-solid fa-location-dot"></i> Ranchi, Jharkhand, India</span>
+                <span><i class="fa-brands fa-github"></i> <a href="https://github.com/Kushal-025" target="_blank" rel="noopener noreferrer">github.com/Kushal-025</a></span>
+                <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact_info%3B51tBoTuaSWKirHKUr0IE%2Bg%3D%3D" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></span>
+            </div>
+        </header>
+
+        <!-- Grid Layout -->
+        <div class="grid-container">
+            
+            <!-- Sidebar -->
+            <div class="sidebar">
+                
+                <!-- Skills -->
+                <div>
+                    <h3 class="section-title-sidebar">Technical Skills</h3>
+                    <div class="skill-group">
+                        <h4>Frontend</h4>
+                        <p>React.js, JavaScript (ES6+), HTML5, CSS3, Responsive Design, DOM Manipulation</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Backend</h4>
+                        <p>Node.js, Express.js, REST APIs, JWT Authentication, CRUD Operations</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Databases</h4>
+                        <p>MySQL, MongoDB</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Tools</h4>
+                        <p>Git, GitHub, VS Code, Vercel, Postman</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Core CS</h4>
+                        <p>DSA, OOP, Agile, SDLC</p>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div>
+                    <h3 class="section-title-sidebar">Education</h3>
+                    <div class="education-item">
+                        <span class="education-date">Graduating Aug 2025</span>
+                        <h4>B.Sc. Information Technology</h4>
+                        <p>State University</p>
+                    </div>
+                </div>
+
+                <!-- Certification -->
+                <div>
+                    <h3 class="section-title-sidebar">Certification</h3>
+                    <div class="education-item">
+                        <span class="education-date">Grade A+ (90%)</span>
+                        <h4>Python with Machine Learning</h4>
+                        <p>ID: EMCE940435</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                
+                <!-- Summary -->
+                <div>
+                    <h3 class="section-title-main"><i class="fa-solid fa-user-tie"></i> Professional Summary</h3>
+                    <p class="summary-text">
+                        Frontend Developer with hands-on experience building responsive, business-focused web applications using React.js, JavaScript, HTML5, CSS3, Node.js, and REST APIs. Developed customer-facing solutions that improved booking workflows, streamlined operations, and enhanced user engagement. Strong foundation in Data Structures & Algorithms, Agile development, and scalable web application design.
+                    </p>
+                </div>
+
+                <!-- Experience -->
+                <div>
+                    <h3 class="section-title-main"><i class="fa-solid fa-briefcase"></i> Internship Experience</h3>
+                    
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h4>Web Development Intern</h4>
+                            <span>Jul 2025 – Sep 2025</span>
+                        </div>
+                        <div class="item-sub">CITC – The Hub of IT</div>
+                        <ul class="item-desc">
+                            <li>Built responsive web applications using JavaScript, HTML5, CSS3, and REST APIs across multiple client projects.</li>
+                            <li>Implemented interactive UI components and CRUD workflows to improve usability and maintainability.</li>
+                            <li>Collaborated using Git/GitHub in Agile environments and contributed across the SDLC lifecycle.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h4>Python & Machine Learning Intern</h4>
+                            <span>May 2025 – Jun 2025</span>
+                        </div>
+                        <div class="item-sub">E-MAX India</div>
+                        <ul class="item-desc">
+                            <li>Developed classification models using Decision Trees, KNN, and SVM.</li>
+                            <li>Executed EDA (Exploratory Data Analysis), training, evaluation, and optimization workflows.</li>
+                            <li>Achieved Grade A+ (90%) in project assessments.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div>
+                    <h3 class="section-title-main"><i class="fa-solid fa-folder-open"></i> Projects</h3>
+                    
+                    <div class="project-item">
+                        <div class="item-header">
+                            <h4>Salon Business Website</h4>
+                            <div class="project-links">
+                                <a href="https://salon-omega-steel.vercel.app" target="_blank" rel="noopener noreferrer">Live Site</a>
+                            </div>
+                        </div>
+                        <ul class="item-desc">
+                            <li>Developed a responsive salon website that improved online visibility and customer acquisition.</li>
+                            <li>Implemented a floating WhatsApp booking system enabling instant appointment requests and reducing booking friction.</li>
+                            <li>Designed a mobile-first experience to increase engagement and lead-generation opportunities.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="item-header">
+                            <h4>Wedding Service Landing Page</h4>
+                            <div class="project-links">
+                                <a href="https://wedding-one-murex.vercel.app" target="_blank" rel="noopener noreferrer">Live Site</a>
+                            </div>
+                        </div>
+                        <ul class="item-desc">
+                            <li>Built a conversion-focused landing page for wedding service providers using HTML5, CSS3, and JavaScript.</li>
+                            <li>Integrated a floating WhatsApp inquiry and booking system to enable direct customer communication.</li>
+                            <li>Improved conversion opportunities through responsive design and seamless inquiry workflows.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="item-header">
+                            <h4>Tiffin Distribution Management System</h4>
+                        </div>
+                        <ul class="item-desc">
+                            <li>Developed a full-stack food delivery management platform using MySQL, REST APIs, and CRUD operations.</li>
+                            <li>Automated customer, order, and delivery workflows, reducing manual processing effort by 40%.</li>
+                            <li>Collaborated in a 5-member Agile team to deliver a scalable solution for growing business operations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
