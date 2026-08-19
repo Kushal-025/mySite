@@ -8,24 +8,24 @@ export default function Footer({ isDark }) {
   };
 
   return (
-    <footer className={`relative z-10 pt-16 pb-10 border-t ${
+    <footer className={`relative z-10 pt-12 sm:pt-16 pb-8 sm:pb-10 border-t ${
       isDark ? 'border-white/10 bg-[#02050e]' : 'border-slate-200 bg-slate-50'
     }`}>
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 pb-8 sm:pb-12">
           {/* Brand & Bio */}
-          <div className="md:col-span-5 space-y-4 text-center md:text-left">
-            <a href="#home" className="inline-block text-2xl font-bold tracking-tight">
+          <div className="md:col-span-5 space-y-3 sm:space-y-4 text-center md:text-left flex flex-col items-center md:items-start">
+            <a href="#home" className="inline-block text-xl sm:text-2xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
                 Kushal Banerjee
               </span>
             </a>
-            <p className={`text-sm max-w-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+            <p className={`text-xs sm:text-sm max-w-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
               Frontend & Full Stack Software Developer creating high-performance, modern web applications with React, Tailwind CSS, Node.js, and MongoDB.
             </p>
             <div className={`flex items-center justify-center md:justify-start gap-2 text-xs ${isDark ? 'text-slate-500' : 'text-slate-500'}`}>
-              <MapPin size={14} className="text-cyan-400" />
+              <MapPin size={14} className="text-cyan-400 shrink-0" />
               <span>Ranchi, Jharkhand, India</span>
             </div>
           </div>
@@ -35,7 +35,7 @@ export default function Footer({ isDark }) {
             <h4 className="text-xs font-bold uppercase tracking-widest text-indigo-400">
               Quick Navigation
             </h4>
-            <div className="grid grid-cols-2 gap-2 text-sm">
+            <div className="grid grid-cols-2 gap-2 text-xs sm:text-sm max-w-xs mx-auto md:mx-0">
               <a href="#home" className={`transition hover:text-indigo-400 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Home</a>
               <a href="#services" className={`transition hover:text-indigo-400 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Services</a>
               <a href="#about" className={`transition hover:text-indigo-400 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>About</a>
@@ -89,17 +89,17 @@ export default function Footer({ isDark }) {
                 <Mail size={17} />
               </a>
             </div>
-            <p className={`text-xs ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>
+            <p className={`text-[11px] sm:text-xs ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>
               Open to opportunities & collaborations.
             </p>
           </div>
         </div>
 
         {/* Bottom Line & Copyright */}
-        <div className={`pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4 text-xs ${
+        <div className={`pt-6 sm:pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs ${
           isDark ? 'border-white/5 text-slate-500' : 'border-slate-200 text-slate-500'
         }`}>
-          <div>
+          <div className="text-center sm:text-left">
             &copy; {new Date().getFullYear()} <span className="font-semibold text-slate-300">Kushal Banerjee</span>. All rights reserved.
           </div>
 

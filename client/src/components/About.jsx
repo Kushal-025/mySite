@@ -35,25 +35,25 @@ export default function About({ isDark }) {
   ];
 
   return (
-    <section id="about" className="py-24 relative z-10">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="about" className="py-16 sm:py-24 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2 block">
             Biography & Capabilities
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
             About Me & Technical Skills
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mx-auto mt-4 rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           {/* Left Column: Summary & Skills */}
-          <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold">Summary</h3>
-              <p className={`leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold">Summary</h3>
+              <p className={`text-sm sm:text-base leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                 I have hands-on experience building responsive, business-focused web applications.
                 I've developed customer-facing solutions that improve booking workflows, streamline operations,
                 and enhance user engagement. I possess a strong foundation in scalable web application design,
@@ -62,13 +62,13 @@ export default function About({ isDark }) {
             </div>
 
             {/* Skills Badges Grid */}
-            <div className="space-y-4">
-              <h4 className="text-lg font-bold">My Tech Stack</h4>
-              <div className="flex flex-wrap gap-2.5">
+            <div className="space-y-3 sm:space-y-4">
+              <h4 className="text-base sm:text-lg font-bold">My Tech Stack</h4>
+              <div className="flex flex-wrap gap-2 sm:gap-2.5">
                 {skills.map((skill, idx) => (
                   <div
                     key={idx}
-                    className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium border transition duration-300 hover:scale-105 hover:-translate-y-0.5 cursor-default ${
+                    className={`flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-xs sm:text-sm font-medium border transition duration-300 hover:scale-105 hover:-translate-y-0.5 cursor-default ${
                       isDark
                         ? 'border-white/10 bg-[#0b0f19]/90 text-slate-300 hover:border-indigo-500/50 hover:bg-white/5 shadow-md shadow-black/20'
                         : 'border-slate-200 bg-white text-slate-700 hover:border-indigo-400 hover:bg-slate-50 shadow-sm'
@@ -83,23 +83,23 @@ export default function About({ isDark }) {
           </div>
 
           {/* Right Column: Stats Grid */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
+          <div className="lg:col-span-5 grid grid-cols-2 gap-3 sm:gap-4">
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className={`p-6 rounded-2xl border text-center flex flex-col items-center justify-center gap-2 transition duration-300 hover:scale-105 hover:-translate-y-1 ${
+                className={`p-4 sm:p-6 rounded-2xl border text-center flex flex-col items-center justify-center gap-1.5 sm:gap-2 transition duration-300 hover:scale-105 hover:-translate-y-1 ${
                   isDark
                     ? 'border-white/10 bg-[#0b0f19]/80 backdrop-blur-xl shadow-lg shadow-black/30 hover:border-indigo-500/40'
                     : 'border-slate-200 bg-white shadow-md shadow-slate-200/50 hover:border-indigo-400'
                 }`}
               >
-                <div className="p-3 rounded-xl bg-white/5 border border-white/5 mb-1">
+                <div className="p-2.5 sm:p-3 rounded-xl bg-white/5 border border-white/5 mb-0.5 sm:mb-1">
                   {stat.icon}
                 </div>
-                <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+                <div className="text-2xl sm:text-4xl font-extrabold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
                   {stat.number}
                 </div>
-                <div className={`text-xs font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                <div className={`text-[11px] sm:text-xs font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                   {stat.label}
                 </div>
               </div>

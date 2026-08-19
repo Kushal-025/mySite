@@ -18,12 +18,25 @@ export default function ParticleBackground() {
     window.addEventListener('resize', resize);
     resize();
 
-    // --- Mouse tracking ---
+    // --- Mouse & Touch tracking ---
     const handleMouseMove = (e) => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     };
+    const handleTouchMove = (e) => {
+      if (e.touches && e.touches.length > 0) {
+        mouse.x = e.touches[0].clientX;
+        mouse.y = e.touches[0].clientY;
+      }
+    };
+    const handleTouchEnd = () => {
+      mouse.x = -100;
+      mouse.y = -100;
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd);
 
     // ========================
     // 1. SHOOTING STARS
@@ -217,6 +230,8 @@ export default function ParticleBackground() {
     return () => {
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleTouchEnd);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);

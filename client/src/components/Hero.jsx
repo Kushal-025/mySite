@@ -16,21 +16,21 @@ export default function Hero({ isDark }) {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
               Hi, I'm{' '}
-              <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent whitespace-nowrap">
+              <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent sm:whitespace-nowrap">
                 Kushal Banerjee
               </span>
             </h1>
 
             {/* Subtext */}
-            <p className={`text-base sm:text-lg max-w-xl leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+            <p className={`text-sm sm:text-lg max-w-xl leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
               I build responsive, business-focused web applications using React.js, Tailwind CSS, JavaScript, Node.js, and MongoDB.
               I craft customer-facing solutions that improve workflows, streamline operations, and boost user engagement.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-3 pt-2 w-full sm:w-auto">
               <a
                 href="#contact"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-600 text-white shadow-lg shadow-indigo-600/30 transition duration-300 hover:scale-105 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
@@ -95,12 +95,12 @@ export default function Hero({ isDark }) {
           </div>
 
           {/* Right Hero Image Container with Animated Glow */}
-          <div className="lg:col-span-5 flex justify-center items-center relative">
+          <div className="lg:col-span-5 flex justify-center items-center relative my-4 sm:my-0">
             {/* Spinning decorative ring */}
-            <div className="absolute -inset-4 rounded-full border-2 border-dashed border-cyan-400/30 animate-spin-slow pointer-events-none" />
+            <div className="absolute -inset-3 sm:-inset-4 rounded-full border-2 border-dashed border-cyan-400/30 animate-spin-slow pointer-events-none" />
 
             {/* Glowing gradient background */}
-            <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full p-2.5 bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-400 shadow-2xl shadow-indigo-600/30 transition-transform duration-500 hover:scale-105">
+            <div className="w-56 h-56 sm:w-80 sm:h-80 rounded-full p-2 sm:p-2.5 bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-400 shadow-2xl shadow-indigo-600/30 transition-transform duration-500 hover:scale-105">
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#030712] bg-[#0b0f19] relative group">
                 <img
                   src="/kushal-profile.jpg"

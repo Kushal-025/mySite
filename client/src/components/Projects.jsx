@@ -47,21 +47,21 @@ export default function Projects({ isDark }) {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section id="projects" className="py-24 relative z-10">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="py-16 sm:py-24 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2 block">
             Showcase & Portfolio
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
             Featured Projects
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mx-auto mt-4 rounded-full" />
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex justify-center gap-3 mb-14">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 sm:mb-14">
           {[
             { id: 'all', label: 'All Projects' },
             { id: 'web', label: 'Web Apps' },
@@ -70,7 +70,7 @@ export default function Projects({ isDark }) {
             <button
               key={tab.id}
               onClick={() => setActiveFilter(tab.id)}
-              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
+              className={`px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
                 activeFilter === tab.id
                   ? 'bg-gradient-to-r from-indigo-600 to-cyan-500 text-white shadow-lg shadow-indigo-500/25 scale-105'
                   : isDark
@@ -84,7 +84,7 @@ export default function Projects({ isDark }) {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
@@ -96,7 +96,7 @@ export default function Projects({ isDark }) {
             >
               <div>
                 {/* Image Box */}
-                <div className="relative h-48 sm:h-52 overflow-hidden bg-slate-900">
+                <div className="relative h-44 sm:h-52 overflow-hidden bg-slate-900">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -105,20 +105,20 @@ export default function Projects({ isDark }) {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-transparent to-transparent opacity-80" />
 
                   {/* Badges on top */}
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-black/60 backdrop-blur-md text-cyan-400 border border-cyan-500/30">
+                  <div className="absolute top-3.5 left-3.5 sm:top-4 sm:left-4">
+                    <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-black/60 backdrop-blur-md text-cyan-400 border border-cyan-500/30">
                       {project.categoryLabel}
                     </span>
                   </div>
 
                   {/* Action Link Icons */}
-                  <div className="absolute bottom-4 right-4 flex items-center gap-2 opacity-90 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute bottom-3.5 right-3.5 sm:bottom-4 sm:right-4 flex items-center gap-2 opacity-90 group-hover:opacity-100 transition-opacity">
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2.5 rounded-full bg-black/70 backdrop-blur-md text-white hover:text-cyan-400 hover:scale-110 transition border border-white/10"
+                        className="p-2 sm:p-2.5 rounded-full bg-black/70 backdrop-blur-md text-white hover:text-cyan-400 hover:scale-110 transition border border-white/10"
                         aria-label="View Source Code"
                       >
                         <FaGithub size={16} />
@@ -129,7 +129,7 @@ export default function Projects({ isDark }) {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2.5 rounded-full bg-indigo-600 text-white hover:bg-cyan-500 hover:scale-110 transition shadow-lg"
+                        className="p-2 sm:p-2.5 rounded-full bg-indigo-600 text-white hover:bg-cyan-500 hover:scale-110 transition shadow-lg"
                         aria-label="View Live Project"
                       >
                         <ExternalLink size={16} />
@@ -139,23 +139,23 @@ export default function Projects({ isDark }) {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-3">
-                  <h3 className="text-xl font-bold group-hover:text-indigo-400 transition-colors">
+                <div className="p-5 sm:p-6 space-y-2.5 sm:space-y-3">
+                  <h3 className="text-lg sm:text-xl font-bold group-hover:text-indigo-400 transition-colors">
                     {project.title}
                   </h3>
-                  <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+                  <p className={`text-xs sm:text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                     {project.desc}
                   </p>
                 </div>
               </div>
 
               {/* Tech stack tags */}
-              <div className="p-6 pt-0">
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+              <div className="p-5 sm:p-6 pt-0">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-3 sm:pt-4 border-t border-white/5">
                   {project.tech.map((t, idx) => (
                     <span
                       key={idx}
-                      className={`text-[11px] font-semibold px-2.5 py-1 rounded-lg ${
+                      className={`text-[10px] sm:text-[11px] font-semibold px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg ${
                         isDark ? 'bg-white/5 text-slate-400 border border-white/5' : 'bg-slate-100 text-slate-600 border border-slate-200'
                       }`}
                     >

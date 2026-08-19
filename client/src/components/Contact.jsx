@@ -90,58 +90,58 @@ export default function Contact({ isDark }) {
   };
 
   return (
-    <section id="contact" className="py-24 relative z-10">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="contact" className="py-16 sm:py-24 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2 block">
             Get In Touch
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
             Contact Kushal
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mx-auto mt-4 rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
           {/* Left Column: Direct Info */}
-          <div className="lg:col-span-5 space-y-8">
-            <div className="space-y-3">
-              <h3 className="text-2xl font-bold">Let's talk about your next project</h3>
-              <p className={`leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+          <div className="lg:col-span-5 space-y-6 sm:space-y-8">
+            <div className="space-y-2 sm:space-y-3">
+              <h3 className="text-xl sm:text-2xl font-bold">Let's talk about your next project</h3>
+              <p className={`text-xs sm:text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                 Feel free to reach out for frontend engineering roles, full-stack development, freelance web apps,
                 or software opportunities. I respond promptly to inquiries.
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <a
                 href="mailto:kushalbanerjee025@gmail.com"
-                className={`p-5 rounded-2xl border flex items-center gap-4 transition duration-300 hover:scale-105 hover:border-indigo-500/50 ${
+                className={`p-4 sm:p-5 rounded-2xl border flex items-center gap-3 sm:gap-4 transition duration-300 hover:scale-105 hover:border-indigo-500/50 ${
                   isDark ? 'border-white/10 bg-[#0b0f19]/80 shadow-md shadow-black/20' : 'border-slate-200 bg-white shadow-sm'
                 }`}
               >
-                <div className="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
-                  <Mail size={22} />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0">
+                  <Mail size={20} />
                 </div>
-                <div>
-                  <div className={`text-xs font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Email Me</div>
-                  <div className="font-semibold text-sm sm:text-base">kushalbanerjee025@gmail.com</div>
+                <div className="overflow-hidden">
+                  <div className={`text-[11px] sm:text-xs font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Email Me</div>
+                  <div className="font-semibold text-xs sm:text-base break-all sm:break-normal">kushalbanerjee025@gmail.com</div>
                 </div>
               </a>
 
               <a
                 href="tel:+919771385898"
-                className={`p-5 rounded-2xl border flex items-center gap-4 transition duration-300 hover:scale-105 hover:border-cyan-500/50 ${
+                className={`p-4 sm:p-5 rounded-2xl border flex items-center gap-3 sm:gap-4 transition duration-300 hover:scale-105 hover:border-cyan-500/50 ${
                   isDark ? 'border-white/10 bg-[#0b0f19]/80 shadow-md shadow-black/20' : 'border-slate-200 bg-white shadow-sm'
                 }`}
               >
-                <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center">
-                  <Phone size={22} />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+                  <Phone size={20} />
                 </div>
                 <div>
-                  <div className={`text-xs font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Call Me</div>
-                  <div className="font-semibold text-sm sm:text-base">+91 97713 85898</div>
+                  <div className={`text-[11px] sm:text-xs font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Call Me</div>
+                  <div className="font-semibold text-xs sm:text-base">+91 97713 85898</div>
                 </div>
               </a>
 
@@ -149,16 +149,16 @@ export default function Contact({ isDark }) {
                 href="https://maps.google.com/?q=Ranchi,Jharkhand,India"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-5 rounded-2xl border flex items-center gap-4 transition duration-300 hover:scale-105 hover:border-purple-500/50 ${
+                className={`p-4 sm:p-5 rounded-2xl border flex items-center gap-3 sm:gap-4 transition duration-300 hover:scale-105 hover:border-purple-500/50 ${
                   isDark ? 'border-white/10 bg-[#0b0f19]/80 shadow-md shadow-black/20' : 'border-slate-200 bg-white shadow-sm'
                 }`}
               >
-                <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center">
-                  <MapPin size={22} />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+                  <MapPin size={20} />
                 </div>
                 <div>
-                  <div className={`text-xs font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Location</div>
-                  <div className="font-semibold text-sm sm:text-base">Ranchi, Jharkhand, India</div>
+                  <div className={`text-[11px] sm:text-xs font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Location</div>
+                  <div className="font-semibold text-xs sm:text-base">Ranchi, Jharkhand, India</div>
                 </div>
               </a>
             </div>
@@ -167,15 +167,15 @@ export default function Contact({ isDark }) {
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
             <div
-              className={`p-8 sm:p-10 rounded-3xl border ${
+              className={`p-5 sm:p-8 md:p-10 rounded-3xl border ${
                 isDark
                   ? 'border-white/10 bg-[#0b0f19]/90 backdrop-blur-2xl shadow-2xl shadow-black/40'
                   : 'border-slate-200 bg-white shadow-xl shadow-slate-200/50'
               }`}
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 {/* Full Name */}
-                <div className="space-y-2">
+                <div className="space-y-1.5 sm:space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Full Name *
                   </label>
@@ -186,7 +186,7 @@ export default function Contact({ isDark }) {
                     onChange={handleChange}
                     placeholder="e.g. John Doe"
                     required
-                    className={`w-full px-4 py-3.5 rounded-xl border text-sm outline-none transition focus:ring-2 focus:ring-indigo-500/30 ${
+                    className={`w-full px-3.5 sm:px-4 py-3 sm:py-3.5 rounded-xl border text-base sm:text-sm outline-none transition focus:ring-2 focus:ring-indigo-500/30 ${
                       isDark
                         ? 'border-white/10 bg-white/5 text-white placeholder-slate-500 focus:border-indigo-500'
                         : 'border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:bg-white'
@@ -195,7 +195,7 @@ export default function Contact({ isDark }) {
                 </div>
 
                 {/* Email Address */}
-                <div className="space-y-2">
+                <div className="space-y-1.5 sm:space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Email Address *
                   </label>
@@ -206,7 +206,7 @@ export default function Contact({ isDark }) {
                     onChange={handleChange}
                     placeholder="e.g. john@example.com"
                     required
-                    className={`w-full px-4 py-3.5 rounded-xl border text-sm outline-none transition focus:ring-2 focus:ring-indigo-500/30 ${
+                    className={`w-full px-3.5 sm:px-4 py-3 sm:py-3.5 rounded-xl border text-base sm:text-sm outline-none transition focus:ring-2 focus:ring-indigo-500/30 ${
                       isDark
                         ? 'border-white/10 bg-white/5 text-white placeholder-slate-500 focus:border-indigo-500'
                         : 'border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:bg-white'
@@ -215,7 +215,7 @@ export default function Contact({ isDark }) {
                 </div>
 
                 {/* Subject */}
-                <div className="space-y-2">
+                <div className="space-y-1.5 sm:space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Subject *
                   </label>
@@ -226,7 +226,7 @@ export default function Contact({ isDark }) {
                     onChange={handleChange}
                     placeholder="e.g. Frontend Developer Role / Web Project Inquiry"
                     required
-                    className={`w-full px-4 py-3.5 rounded-xl border text-sm outline-none transition focus:ring-2 focus:ring-indigo-500/30 ${
+                    className={`w-full px-3.5 sm:px-4 py-3 sm:py-3.5 rounded-xl border text-base sm:text-sm outline-none transition focus:ring-2 focus:ring-indigo-500/30 ${
                       isDark
                         ? 'border-white/10 bg-white/5 text-white placeholder-slate-500 focus:border-indigo-500'
                         : 'border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:bg-white'
@@ -235,7 +235,7 @@ export default function Contact({ isDark }) {
                 </div>
 
                 {/* Message */}
-                <div className="space-y-2">
+                <div className="space-y-1.5 sm:space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Your Message *
                   </label>
@@ -246,7 +246,7 @@ export default function Contact({ isDark }) {
                     onChange={handleChange}
                     placeholder="Hi Kushal, let's connect regarding..."
                     required
-                    className={`w-full px-4 py-3.5 rounded-xl border text-sm outline-none transition focus:ring-2 focus:ring-indigo-500/30 resize-none ${
+                    className={`w-full px-3.5 sm:px-4 py-3 sm:py-3.5 rounded-xl border text-base sm:text-sm outline-none transition focus:ring-2 focus:ring-indigo-500/30 resize-none ${
                       isDark
                         ? 'border-white/10 bg-white/5 text-white placeholder-slate-500 focus:border-indigo-500'
                         : 'border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:bg-white'
