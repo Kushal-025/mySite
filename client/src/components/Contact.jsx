@@ -131,21 +131,6 @@ export default function Contact({ isDark }) {
               </a>
 
               <a
-                href="tel:+919771385898"
-                className={`p-4 sm:p-5 rounded-2xl border flex items-center gap-3 sm:gap-4 transition duration-300 hover:scale-105 hover:border-cyan-500/50 ${
-                  isDark ? 'border-white/10 bg-[#0b0f19]/80 shadow-md shadow-black/20' : 'border-slate-200 bg-white shadow-sm'
-                }`}
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <div className={`text-[11px] sm:text-xs font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Call Me</div>
-                  <div className="font-semibold text-xs sm:text-base">+91 97713 85898</div>
-                </div>
-              </a>
-
-              <a
                 href="https://maps.google.com/?q=Ranchi,Jharkhand,India"
                 target="_blank"
                 rel="noopener noreferrer"
